@@ -17,13 +17,9 @@ class StaticTile(Tile):
 
 class Caixote(StaticTile):
 	def __init__(self,size,x,y):
-		super().__init__(size,x,y,pygame.image.load('./graphics/terrain/caixote.png').convert_alpha())
+		super().__init__(size,x,y,pygame.image.load('graphics/terrain/caixote.png').convert_alpha())
 		offset_y = y + size
 		self.rect = self.image.get_rect(bottomleft = (x,offset_y))
-
-class Espinhos(StaticTile):
-	def __init__(self, size, x, y):
-		super().__init__(size, x, y, pygame.image.load('./graphics/terrain/espinhos/espinhos.png'))
 
 class AnimatedTile(Tile):
 	def __init__(self,size,x,y,path):
@@ -43,8 +39,9 @@ class AnimatedTile(Tile):
 		self.rect.x += shift
 
 class Moedas(AnimatedTile):
-	def __init__(self,size,x,y,path):
+	def __init__(self,size,x,y,path,value):
 		super().__init__(size,x,y,path)
 		center_x = x + int(size / 2)
 		center_y = y + int(size / 2)
 		self.rect = self.image.get_rect(center = (center_x,center_y))
+		self.value = value

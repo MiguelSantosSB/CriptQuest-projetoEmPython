@@ -8,10 +8,8 @@ level_0 = {
 		'espinhos':'levels/0/level_0_espinhos.csv',
         'cranio':'levels/0/level_0_cranio.csv',
         'node_pos': (250,400),
-        'node_graphics': 'graphics/overworld/0',
-        'unlock': 1
-        }
-
+        'unlock': 1,
+        'node_graphics': 'graphics/overworld/0'}
 level_1 = {
 		'estrutura':'levels/1/level_1_estrutura.csv',
 		'moedas':'levels/1/level_1_moedas.csv',
@@ -23,9 +21,7 @@ level_1 = {
         'cranio':'levels/1/level_1_cranio.csv',
         'node_pos': (600,220),
         'node_graphics': 'graphics/overworld/1',
-        'unlock': 2
-        }
-
+        'unlock': 2}
 level_2 = {
 		'estrutura':'levels/2/level_2_estrutura.csv',
 		'moedas':'levels/2/level_2_moedas.csv',
@@ -37,12 +33,10 @@ level_2 = {
         'cranio':'levels/2/level_2_cranio.csv',
         'node_pos': (850,500),
         'node_graphics': 'graphics/overworld/2',
-        'unlock': 2
-        }
+        'unlock': 2}
+
 
 levels = {
-    0: level_0,
-    1: level_1,
-    2: level_2
-}
-
+	0: level_0,
+	1: level_1,
+	2: level_2}
