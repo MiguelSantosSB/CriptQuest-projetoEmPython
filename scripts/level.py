@@ -1,7 +1,7 @@
 import pygame 
 from .support import import_csv_layout, import_cut_graphics
 from .settings import tile_size, screen_height, screen_width
-from .tiles import Tile, StaticTile, Caixote, Moedas
+from .tiles import Tile, StaticTile, Caixote, Moedas,Cranio
 from .enemy import Enemy
 from .player import Player
 from .particles import ParticleEffect
@@ -44,16 +44,17 @@ class Level:
 		estrutura_layout = import_csv_layout(level_data['estrutura'])
 		self.estrutura_sprites = self.create_tile_group(estrutura_layout,'estrutura')
 
-
+		# cranio
+		cranio_layout = import_csv_layout(level_data['cranio'])
+		self.cranio_sprites = self.create_tile_group(cranio_layout, 'cranio')
 
 		# caixote
 		caixote_layout = import_csv_layout(level_data['caixote'])
-		self.caixote_sprites = self.create_tile_group(caixote_layout,'moedas')
+		self.caixote_sprites = self.create_tile_group(caixote_layout,'caixote')
 
 		# moedas 
 		moedas_layout = import_csv_layout(level_data['moedas'])
 		self.moedas_sprites = self.create_tile_group(moedas_layout,'moedas')
-
 
 		# inimigos
 		enemy_layout = import_csv_layout(level_data['enemies'])
@@ -77,6 +78,9 @@ class Level:
 						tile_surface = estrutura_tile_list[int(val)]
 						sprite = StaticTile(tile_size,x,y,tile_surface)
 					
+					if type == 'cranio':
+						sprite = Cranio(tile_size,x,y)
+
 					if type == 'caixote':
 						sprite = Caixote(tile_size,x,y)
 
@@ -232,6 +236,10 @@ class Level:
 		self.enemy_sprites.draw(self.display_surface)
 		self.explosion_sprites.update(self.world_shift)
 		self.explosion_sprites.draw(self.display_surface)
+
+		# cranio
+		self.cranio_sprites.update(self.world_shift)
+		self.cranio_sprites.draw(self.display_surface)
 
 		# caixote 
 		self.caixote_sprites.update(self.world_shift)
