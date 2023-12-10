@@ -71,6 +71,12 @@ screen = pygame.display.set_mode((screen_width,screen_height))
 clock = pygame.time.Clock()
 game = Game()
 
+image = pygame.image.load('graphics/terrain/background.png')
+def background(image):
+	size = pygame.transform.scale(image, (screen_width,screen_height))
+	screen.blit(size, (0,0))
+
+
 while True:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
@@ -78,6 +84,7 @@ while True:
 			sys.exit()
 	
 	screen.fill('black')
+	background(image)
 	game.run()
 
 	pygame.display.update()
