@@ -26,6 +26,6 @@ class UI:
 
 	def show_coins(self,amount):
 		self.display_surface.blit(self.coin,self.coin_rect)
-		coin_amount_surf = self.font.render(str(amount),False,'#33323d')
+		coin_amount_surf = self.font.render(str(amount),False,'white')
 		coin_amount_rect = coin_amount_surf.get_rect(midleft = (self.coin_rect.right + 4,self.coin_rect.centery))
 		self.display_surface.blit(coin_amount_surf,coin_amount_rect)
