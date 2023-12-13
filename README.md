@@ -3,7 +3,7 @@ CriptQuest
 
 Como executar:
 siga o seguinte caminho da seguinte pasta presente no repositório:
-        build/exe.win-amd64-3.11/CriptQuest.exe
+        build/exe.win-amd64-3.11/CriptQuest.exe/n
 este arquivo será o executável do jogo
 
 Como jogar:
