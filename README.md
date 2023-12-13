@@ -13,7 +13,7 @@ na tela inicial estará presente os mapas disponíveis
 
   para mudar de mapa basta com o pressionar os botões A(para esquerda) e D(para direita)
     
-    para confirmar a escolha do mapa basta apertar o ESPACE assim confirmando e iniciando a campanha
+  para confirmar a escolha do mapa basta apertar o ESPACE assim confirmando e iniciando a campanha
 
 durante o jogo terá a possibilidade de andar para direita e esquerda e pular 
  
